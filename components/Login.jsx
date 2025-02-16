@@ -1,7 +1,11 @@
-import React from 'react'
+'use client';
+import React, { useActionState } from 'react'
 import { login } from '@/app/login/actions'
 
 export default function Login() {
+  const initialState = { success: true, error: null }
+  const [state, formAction] = useActionState(login, initialState)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
@@ -10,7 +14,13 @@ export default function Login() {
           <p className="text-gray-600 mb-8">Power your future with sustainable energy</p>
         </div>
         
-        <form className="space-y-6">
+        {state?.error && (
+          <div className="p-3 text-sm text-red-500 bg-red-50 border border-red-200 rounded-lg">
+            {state.error}
+          </div>
+        )}
+
+        <form action={formAction} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Email Address
@@ -41,7 +51,6 @@ export default function Login() {
 
           <div className="flex flex-col gap-3">
             <button
-              formAction={login}
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
             >
               Sign In
