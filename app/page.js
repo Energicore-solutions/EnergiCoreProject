@@ -7,7 +7,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-green-800 mb-6">Power Your Future with Renewable Energy</h1>
             <p className="text-xl text-gray-600 mb-8">Transform your energy consumption with sustainable and cost-effective renewable solutions.</p>
-            <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">Get Started</button>
+            <a href="/purchase" className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">Get Started</a>
           </div>
         </div>
       </section>
