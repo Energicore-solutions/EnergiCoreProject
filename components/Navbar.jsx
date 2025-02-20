@@ -24,6 +24,7 @@ export default function Navbar({ issignedin }) {
           <div className='hidden md:flex items-center space-x-4'>
             <a href="/purchase" className='px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors'>Buy Energy</a>
             <a href="/sell" className='px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors'>Sell Energy</a>
+            <a href="/forum" className='px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors'>Forum</a>
             {issignedin ? (
               <a href='/dashboard' className='px-6 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity'>
                 Dashboard
@@ -45,6 +46,9 @@ export default function Navbar({ issignedin }) {
             </a>
             <a href="/sell" className='px-4 py-3 text-gray-600 hover:bg-green-50 rounded-lg transition-colors'>
               Sell Energy
+            </a>
+            <a href="/forum" className='px-4 py-3 text-gray-600 hover:bg-green-50 rounded-lg transition-colors'>
+              Forum
             </a>
             {issignedin ? (
               <a href='/dashboard' className='px-4 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity'>
