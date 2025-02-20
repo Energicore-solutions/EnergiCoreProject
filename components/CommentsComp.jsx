@@ -47,7 +47,7 @@ export default function CommentsComp({ id, author, authorId, initialComments }) 
             {/* Comment Form */}
             <form onSubmit={handleSubmit} className="mb-8">
                 <div className="flex flex-col space-y-3">
-                    <div className=" bg-gray-300 rounded-lg p-4 border">
+                    <div className=" bg-gray-200 rounded-lg p-4 border">
                         <h3 className="text-lg font-semibold mb-2 text-gray-700">Leave a Comment</h3>
                         <textarea
                             value={newComment}
