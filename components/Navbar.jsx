@@ -12,9 +12,7 @@ export default function Navbar({ issignedin }) {
       <div className="bg-gradient-to-r from-green-50 via-blue-50 to-green-50 shadow-md">
         <div className="navbar justify-between px-6 md:px-12 max-w-7xl mx-auto">
           <a href='/' className="flex items-center space-x-2 text-2xl font-bold text-gray-800">
-            <FaSolarPanel className="text-yellow-500" />
-            <span>ReWatt</span>
-            <FaLeaf className="text-green-500" />
+            <Image src={'/rewatt_logo.png'} height={150} width={150} alt='ReWatt Logo' />
           </a>
           
           <button onClick={() => setIsVisible(!isVisible)} className='md:hidden'>

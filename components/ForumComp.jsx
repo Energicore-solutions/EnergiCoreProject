@@ -46,34 +46,22 @@ export default function ForumComp({ posts }) {
             <div className="max-w-6xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl font-bold text-emerald-700">
                         Energy Community Forum
                     </h1>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 max-w-2xl mx-auto mt-1">
                         Join the conversation about sustainable energy solutions and help shape the future of renewable technologies
                     </p>
                 </div>
 
-                {/* Topic Filter */}
-                <div className="flex flex-wrap gap-3 mb-8 justify-center">
-                    {topics.map((topic) => (
-                        <button
-                            key={topic}
-                            className="px-6 py-2 rounded-full border border-emerald-200 bg-white hover:bg-emerald-50 
-                            text-sm transition-all duration-300 flex items-center gap-2 text-gray-700"
-                        >
-                            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            {topic}
-                        </button>
-                    ))}
-                </div>
+                
 
                 {/* Posts List */}
                 <div className="space-y-6">
                     {posts?.map((post) => (
                         <div 
                             key={post.id} 
-                            className="bg-gray-100 shadow-sm rounded-xl p-6 hover:shadow-lg 
+                            className="bg-white shadow-sm rounded-xl p-6 hover:shadow-lg 
                             transition-all duration-300 cursor-pointer border border-xl border-emerald-500"
                             onClick={() => handlePostClick(post.id)}
                         >
@@ -95,7 +83,7 @@ export default function ForumComp({ posts }) {
                 {/* Create Post Button */}
                 <button 
                     onClick={() => setIsModalOpen(true)}
-                    className="fixed bottom-8 right-8 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 
+                    className="fixed bottom-12 right-10 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 
                     hover:to-emerald-800 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg 
                     transition-all duration-300 hover:scale-105"
                 >
