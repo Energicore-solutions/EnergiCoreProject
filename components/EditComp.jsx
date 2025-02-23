@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FiEdit2 } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 
-export default function EditComp({ onClick }) {
+export default function EditComp({ onClick, isAuthor }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         title: '',
